@@ -14,7 +14,7 @@ This app can be found: [notes-mhs.herokuapp.com](https://notes-mhs.herokuapp.com
 * [SimpleSchema](https://github.com/aldeed/simple-schema-js)
 * [Moment.js](https://momentjs.com/)
 * [fourseven:scss](https://atmospherejs.com/fourseven/scss)
-* [practicalmeteor:mocha](https://atmospherejs.com/practicalmeteor/mocha)
+* [cultofcoders:mocha](https://atmospherejs.com/cultofcoders/mocha)
 
 ## Author
 
