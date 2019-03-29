@@ -29,7 +29,7 @@ Meteor.methods({
       throw new Meteor.Error('not-authorized');
     }
 
-    // validate the noteId
+    // validate the note id
     new SimpleSchema({
       _id: {
         type: String,
@@ -39,5 +39,42 @@ Meteor.methods({
 
     // remove note
     return Notes.remove({ _id, userId: this.userId });
+  },
+
+  'notes.update'(_id, updates) {
+    // check user authenticity
+    if(!this.userId) {
+      throw new Meteor.Error('not-authorized');
+    }
+
+    // validate the note id, title and body
+    new SimpleSchema({
+      _id: {
+        type: String,
+        min: 1
+      },
+      title: {
+        type: String,
+        optional: true
+      },
+      body: {
+        type: String,
+        optional: true
+      }
+    }).validate({ _id, ...updates });
+
+    // update note
+    Notes.update(
+      {
+        _id,
+        userId: this.userId
+      },
+      {
+        $set: {
+          updatedAt: moment().valueOf(),
+          ...updates
+        }
+      }
+    );
   }
 });
