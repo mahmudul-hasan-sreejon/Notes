@@ -1,10 +1,10 @@
+import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 
 import SimpleSchema from 'simpl-schema';
 
 
-// validate new user email
-Accounts.validateNewUser(user => {
+export const validateNewUser = user => {
   // get email address
   const email = user.emails[0].address;
 
@@ -17,4 +17,9 @@ Accounts.validateNewUser(user => {
   }).validate({ email });
 
   return true;
-});
+};
+
+// if on server validate new user email
+if(Meteor.isServer) {
+  Accounts.validateNewUser(validateNewUser);
+}
