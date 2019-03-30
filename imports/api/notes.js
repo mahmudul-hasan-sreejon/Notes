@@ -1,12 +1,20 @@
 import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
 
-import moment from 'moment';
 import SimpleSchema from 'simpl-schema';
+import moment from 'moment';
 
 
 export const Notes = new Mongo.Collection('notes');
 
+// create `notes` publication if on server
+if(Meteor.isServer) {
+  Meteor.publish('notes', function() {
+    return Notes.find({ userId: this.userId });
+  });
+}
+
+// methods for note's operations
 Meteor.methods({
   'notes.insert'() {
     // check user authenticity
