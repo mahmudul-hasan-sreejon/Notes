@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Accounts } from 'meteor/accounts-base';
 
 import Alert from 'react-s-alert';

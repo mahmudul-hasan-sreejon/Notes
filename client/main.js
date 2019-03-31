@@ -1,11 +1,9 @@
 import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 import { Tracker } from 'meteor/tracker';
-import { Session } from 'meteor/session';
-
-import './../imports/startup/simple-schema-config';
 
 import { routes, onAuthChange } from './../imports/routes/routes';
+import './../imports/startup/simple-schema-config';
 
 
 // track user authentication status
