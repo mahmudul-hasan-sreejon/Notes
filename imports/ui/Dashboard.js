@@ -3,7 +3,7 @@ import React from 'react';
 import PrivateHeader from './PrivateHeader';
 
 
-const Link = () => {
+export default () => {
   return (
     <div>
       <PrivateHeader title="Dashboard"/>
@@ -14,5 +14,3 @@ const Link = () => {
     </div>
   );
 };
-
-export default Link;
