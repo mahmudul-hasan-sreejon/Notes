@@ -4,9 +4,9 @@ import { Link } from 'react-router';
 import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 
-import Alert from 'react-s-alert';
-import 'react-s-alert/dist/s-alert-default.css';
-import 'react-s-alert/dist/s-alert-css-effects/stackslide.css';
+// import Alert from 'react-s-alert';
+// import 'react-s-alert/dist/s-alert-default.css';
+// import 'react-s-alert/dist/s-alert-css-effects/stackslide.css';
 
 
 export class Login extends React.Component {
@@ -34,14 +34,14 @@ export class Login extends React.Component {
     });
   }
 
-  showError(error) {
-    Alert.error(error, {
-      position: 'bottom',
-      effect: 'stackslide',
-      preserveContext: true,
-      timeout: 7000
-    });
-  }
+  // showError(error) {
+  //   Alert.error(error, {
+  //     position: 'bottom',
+  //     effect: 'stackslide',
+  //     preserveContext: true,
+  //     timeout: 7000
+  //   });
+  // }
 
   render() {
     return (
@@ -49,9 +49,9 @@ export class Login extends React.Component {
         <div className='boxed-view__box'>
           <h1>Login</h1>
 
-          {/* { this.state.error ? <p>{ this.state.error }</p> : undefined } */}
-          { this.state.error ? this.showError(this.state.error) : undefined }
-          <Alert stack={{ limit: 1 }} />
+           { this.state.error ? <p>{ this.state.error }</p> : undefined }
+          {/*{ this.state.error ? this.showError(this.state.error) : undefined }*/}
+          {/*<Alert stack={{ limit: 1 }} />*/}
 
           <form onSubmit={ this.onSubmit.bind(this) } noValidate className='boxed-view__form'>
             <input type="email" ref="email" name="email" placeholder="Email"/>
