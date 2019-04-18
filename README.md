@@ -8,7 +8,7 @@ This app can be found: [notes-mhs.herokuapp.com](https://notes-mhs.herokuapp.com
 
 * [Meteor](https://www.meteor.com/)
 * [React](https://reactjs.org/)
-* [React Router v4](https://reacttraining.com/react-router/)
+* [React Router v3](https://reacttraining.com/react-router/)
 * [react-s-alert](https://github.com/juliancwirko/react-s-alert)
 * [bcrypt](https://www.npmjs.com/package/bcrypt)
 * [SimpleSchema](https://github.com/aldeed/simple-schema-js)
