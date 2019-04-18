@@ -4,7 +4,7 @@ import { Accounts } from 'meteor/accounts-base';
 import { createContainer } from 'meteor/react-meteor-data';
 
 
-export const PrivateHeader = (props) => {
+export const PrivateHeader = props => {
   return (
     <div className='header'>
       <div className='header__content'>

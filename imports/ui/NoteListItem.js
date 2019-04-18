@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 
-const NoteListItem = props => {
+export const NoteListItem = props => {
   return (
     <div>
       <h5>{ props.note.title || 'Untitled note' }</h5>
