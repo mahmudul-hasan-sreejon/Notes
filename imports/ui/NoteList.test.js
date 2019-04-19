@@ -5,7 +5,7 @@ import expect from 'expect';
 import { mount } from 'enzyme';
 
 import { NoteList } from './NoteList';
-import {notes} from "./../fixtures/fixtures";
+import { notes } from "./../fixtures/fixtures";
 
 
 if(Meteor.isClient) {
