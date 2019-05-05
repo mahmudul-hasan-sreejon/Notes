@@ -13,8 +13,10 @@ import './../imports/startup/simple-schema-config';
 Tracker.autorun(() => {
   // get user authentication status
   const isAuthenticated = !!Meteor.userId();
+  // get current page privacy
+  const currentPagePrivacy = Session.get('currentPagePrivacy');
   // authenticate page change
-  onAuthChange(isAuthenticated);
+  onAuthChange(isAuthenticated, currentPagePrivacy);
 });
 
 // track selected note id
