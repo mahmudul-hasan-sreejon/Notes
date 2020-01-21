@@ -83,7 +83,6 @@ if(Meteor.isClient) {
       expect(wrapper.state('body')).toBe(notes[0].body);
     });
 
-
     it('should not set state if note prop not provided', function () {
       const wrapper = mount(<Editor browserHistory={ browserHistory } call={ call } />);
 
