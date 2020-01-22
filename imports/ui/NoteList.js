@@ -25,8 +25,6 @@ export const NoteList = props => {
           );
         })
       }
-
-      NoteList { props.notes.length }
     </div>
   );
 };
