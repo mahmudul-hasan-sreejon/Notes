@@ -23,15 +23,27 @@ Tracker.autorun(() => {
 Tracker.autorun(() => {
   const selectedNoteId = Session.get('setectedNoteId');
 
+  // close the nav bar
+  Session.set('isNavOpen', false);
+
   // if setectedNoteId changed then change url
   if(selectedNoteId) {
     browserHistory.replace(`/dashboard/${selectedNoteId}`);
   }
 });
 
+// track if navigation menu is open
+Tracker.autorun(() => {
+  const isNavOpen = Session.get('isNavOpen');
+
+  // create or remove 'is-nav-open' class based on isNavOpen variable
+  document.body.classList.toggle('is-nav-open', isNavOpen);
+});
+
 // start app
 Meteor.startup(() => {
   Session.set('setectedNoteId', undefined);
+  Session.set('isNavOpen', false);
   // render the app
   ReactDOM.render(routes, document.getElementById('app'));
 });
