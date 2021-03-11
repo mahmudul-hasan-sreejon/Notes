@@ -18,4 +18,4 @@ This app can be found: [notes-mhs.herokuapp.com](https://notes-mhs.herokuapp.com
 
 ## Author
 
-Created and maintained by Mahmudul Hasan Sreejon ([@mahmudul-hasan-sreejon](http://mahmudulhasansreejon.ml/)).
+Created and maintained by Mahmudul Hasan Sreejon ([@mahmudul-hasan-sreejon](https://www.mahmudul-hasan-sreejon.com/)).
