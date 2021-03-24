@@ -1,9 +1,15 @@
 {
-  "name": "Notes",
-  "private": true,
+  "name": "notes",
+  "private": false,
   "scripts": {
     "start": "meteor run",
     "test": "meteor test --driver-package=cultofcoders:mocha"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    }
   },
   "dependencies": {
     "@babel/runtime": "^7.1.5",
@@ -17,12 +23,6 @@
     "react-s-alert": "^1.4.1",
     "simpl-schema": "^1.5.5"
   },
-  "meteor": {
-    "mainModule": {
-      "client": "client/main.js",
-      "server": "server/main.js"
-    }
-  },
   "devDependencies": {
     "enzyme": "^2.7.1",
     "eslint": "^5.15.1",
@@ -32,6 +32,6 @@
     "react-test-renderer": "^15.4.1"
   },
   "engines": {
-    "node": "8.15.1"
+    "node": "12.14.1"
   }
 }
